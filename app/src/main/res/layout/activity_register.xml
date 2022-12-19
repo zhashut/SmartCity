@@ -68,6 +68,7 @@
             android:gravity="center"
             android:hint="phone"
             android:inputType="phone"
+            android:maxLength="11"
             android:maxLines="1"
             android:minHeight="48dp"
             android:padding="5dp"

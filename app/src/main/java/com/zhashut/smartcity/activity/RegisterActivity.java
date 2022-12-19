@@ -2,11 +2,8 @@ package com.zhashut.smartcity.activity;
 
 import static com.zhashut.smartcity.constant.constant.REGISTER_URL;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -15,11 +12,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.zhashut.smartcity.R;
-import com.zhashut.smartcity.entity.LoginRes;
+import com.zhashut.smartcity.common.MessageRes;
 import com.zhashut.smartcity.entity.Result;
 import com.zhashut.smartcity.utils.Animation;
 import com.zhashut.smartcity.utils.ReqCallback;
@@ -37,42 +33,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private String password;
     private EditText et_phone;
     private String phone;
-    private ImageView iv_rotate;
-    private TextView tv_wait;
+    public ImageView iv_rotate;
+    public TextView tv_wait;
     private RadioGroup rg_sex;
     private int sex;
-    private Result result;
     ReqCallback callback = new ReqCallback();
-    private Handler handler = new Handler(Looper.myLooper()) {
-        @Override
-        public void handleMessage(@NonNull Message msg) {
-            super.handleMessage(msg);
-            result = (Result) msg.obj;
-            if (result.code.equals("200")) {
-                // 登录成功
-                RegisterSuccess(result);
-            } else {
-                // 登录失败
-                RegisterFailed(result);
-            }
-        }
-    };
-
-    // 注册成功
-    private void RegisterSuccess(Result result) {
-        Toast.makeText(this, "注册成功！", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-        // 停止加载动画
-        Animation.StopAnim(this, iv_rotate, tv_wait);
-    }
-
-    // 注册失败
-    private void RegisterFailed(Result result) {
-        Toast.makeText(this, result.message, Toast.LENGTH_LONG).show();
-        // 停止加载动画
-        Animation.StopAnim(this, iv_rotate, tv_wait);
-    }
+    private Handler handler = MessageRes.ResultHandler(RegisterActivity.this, "注册成功");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +60,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.btn_register).setOnClickListener(this);
     }
 
+    /**
+     * 控件绑定事件
+     *
+     * @param v 视图
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -108,8 +79,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     Toast.makeText(this, "手机号码格式不正确", Toast.LENGTH_SHORT).show();
                 }
                 sex = rg_sex.getCheckedRadioButtonId() == R.id.rb_male ? 0 : 1;
-                // 加载动画
-                Animation.LoadingAnim(this, iv_rotate, tv_wait);
+//                // 加载动画
+//                Animation.LoadingAnim(this, iv_rotate, tv_wait);
                 // 注册
                 registerLoading(username, password, phone, sex);
                 break;
