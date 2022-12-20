@@ -11,5 +11,6 @@
     <color name="blue">#a1e1ed</color>
     <color name="orange">#FF761B</color>
     <color name="green">#25CC92</color>
-    <color name="grey">#A19F9F</color>
+    <color name="grey">#707070</color>
+    <color name="commit">#1191FF</color>
 </resources>

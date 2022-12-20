@@ -17,21 +17,21 @@
         android:theme="@style/Theme.SmartCity"
         tools:targetApi="29">
         <activity
-            android:name=".activity.RegisterActivity"
+            android:name=".park.activity.CorrectActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activity.TestActivity"
+            android:name=".Login.activity.RegisterActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".Login.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

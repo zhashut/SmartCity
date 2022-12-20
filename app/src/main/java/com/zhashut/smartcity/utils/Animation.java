@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.zhashut.smartcity.R;
-import com.zhashut.smartcity.global.Global;
 
 /**
  * Created with Android Studio.

@@ -1,6 +1,4 @@
-package com.zhashut.smartcity.activity;
-
-import static com.zhashut.smartcity.constant.constant.LOGIN_URL;
+package com.zhashut.smartcity.Login.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +18,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.zhashut.smartcity.Login.constant.constant;
+import com.zhashut.smartcity.Login.entity.LoginRes;
 import com.zhashut.smartcity.R;
-import com.zhashut.smartcity.entity.LoginRes;
+import com.zhashut.smartcity.park.activity.CorrectActivity;
 import com.zhashut.smartcity.utils.Animation;
 import com.zhashut.smartcity.utils.ReqCallback;
 
@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * 登录成功
      */
     private void loginSuccess(LoginRes user) {
-        Intent intent = new Intent(this, TestActivity.class);
+        Intent intent = new Intent(this, CorrectActivity.class);
         SharedPreferences.Editor edit = preferences.edit();
         String token = user.token;
         edit.putString("token", token);
@@ -164,7 +164,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             // 回调类实例
             callback = new ReqCallback();
             // 回调方法
-            callback.CallBack(LOGIN_URL, jsonObject.toString(), handler, LoginRes.class);
+            callback.CallBack(constant.LOGIN_URL, jsonObject.toString(), handler, LoginRes.class);
         } catch (JSONException e) {
             e.printStackTrace();
         }

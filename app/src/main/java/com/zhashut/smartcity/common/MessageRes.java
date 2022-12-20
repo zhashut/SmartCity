@@ -11,9 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.zhashut.smartcity.activity.LoginActivity;
-import com.zhashut.smartcity.activity.RegisterActivity;
-import com.zhashut.smartcity.entity.Result;
+import com.zhashut.smartcity.Login.activity.LoginActivity;
 import com.zhashut.smartcity.utils.Animation;
 
 /**
@@ -45,7 +43,7 @@ public class MessageRes {
         };
     }
 
-    public static Handler ResultHandler(Context context, String message) {
+    public static Handler ResultHandler(Context context, String successMsg) {
         return new Handler(Looper.myLooper()) {
             @Override
             public void handleMessage(@NonNull Message msg) {
@@ -53,7 +51,7 @@ public class MessageRes {
                 Result result = (Result) msg.obj;
                 if (result.code.equals("200")) {
                     // 注册成功
-                    Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, successMsg, Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(context, LoginActivity.class);
                     context.startActivity(intent);
                 } else {

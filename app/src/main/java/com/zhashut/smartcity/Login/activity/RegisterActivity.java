@@ -1,6 +1,4 @@
-package com.zhashut.smartcity.activity;
-
-import static com.zhashut.smartcity.constant.constant.REGISTER_URL;
+package com.zhashut.smartcity.Login.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,10 +12,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.zhashut.smartcity.Login.constant.constant;
+import com.zhashut.smartcity.common.Result;
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.MessageRes;
-import com.zhashut.smartcity.entity.Result;
-import com.zhashut.smartcity.utils.Animation;
 import com.zhashut.smartcity.utils.ReqCallback;
 
 import org.json.JSONObject;
@@ -98,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             jsonObject.put("phonenumber", phone);
             jsonObject.put("sex", sex);
             // 回调方法
-            callback.CallBack(REGISTER_URL, jsonObject.toString(), handler, Result.class);
+            callback.CallBack(constant.REGISTER_URL, jsonObject.toString(), handler, Result.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
