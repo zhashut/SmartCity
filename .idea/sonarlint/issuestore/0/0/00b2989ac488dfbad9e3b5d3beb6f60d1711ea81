@@ -1,0 +1,10 @@
+
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔŠÁ¿8âÁ¸ƒ×0
+
+java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´ÙÌú8îÁ¸ƒ×0
+o	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ü¦µøÿÿÿÿ8ÿÁ¸ƒ×0
+
+java:S1186A"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´ÙÌú8Â¸ƒ×0
+o	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Úï‘ûşÿÿÿÿ8…Â¸ƒ×0
+
+java:S1186W"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´ÙÌú8‡Â¸ƒ×0

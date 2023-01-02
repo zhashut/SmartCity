@@ -16,13 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartCity"
         tools:targetApi="29">
-<!--        <activity-->
-<!--            android:name=".park.activity.TestActivity"-->
-<!--            android:exported="false">-->
-<!--            <meta-data-->
-<!--                android:name="android.app.lib_name"-->
-<!--                android:value="" />-->
-<!--        </activity>-->
+        <activity
+            android:name=".park.activity.TestActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".park.activity.ParkListActivity"
             android:exported="false">
@@ -45,7 +45,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".park.activity.TestActivity"
+            android:name=".Login.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
