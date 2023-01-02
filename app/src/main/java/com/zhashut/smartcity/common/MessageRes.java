@@ -20,7 +20,7 @@ import com.zhashut.smartcity.utils.Animation;
  * @author: 炸薯条
  * Date: 2022/12/19
  * Time: 21:46
- * Description: No Description
+ * Description: 统一回调成功处理类
  */
 public class MessageRes {
 
@@ -29,7 +29,7 @@ public class MessageRes {
             @Override
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
-                Result result = (Result) msg.obj;
+                ResultEntity result = (ResultEntity) msg.obj;
                 if (result.code.equals("200")) {
                     // 注册成功
                     Toast.makeText(context, result.message, Toast.LENGTH_SHORT).show();
@@ -48,7 +48,7 @@ public class MessageRes {
             @Override
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
-                Result result = (Result) msg.obj;
+                ResultEntity result = (ResultEntity) msg.obj;
                 if (result.code.equals("200")) {
                     // 注册成功
                     Toast.makeText(context, successMsg, Toast.LENGTH_SHORT).show();
@@ -68,7 +68,7 @@ public class MessageRes {
             @Override
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
-                Result result = (Result) msg.obj;
+                ResultEntity result = (ResultEntity) msg.obj;
                 if (result.code.equals("200")) {
                     // 注册成功
                     Toast.makeText(context, result.message, Toast.LENGTH_SHORT).show();

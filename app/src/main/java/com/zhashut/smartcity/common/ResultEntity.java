@@ -12,7 +12,7 @@ import java.io.Serializable;
  * Time: 17:44
  * Description: 统一响应参数类
  */
-public class Result implements Serializable {
+public class ResultEntity implements Serializable {
     public String code;
 
     @SerializedName("msg")
