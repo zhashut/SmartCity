@@ -22,8 +22,9 @@ import com.zhashut.smartcity.Login.constant.constant;
 import com.zhashut.smartcity.Login.entity.LoginRes;
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.park.activity.CorrectActivity;
+import com.zhashut.smartcity.park.activity.ParkListActivity;
 import com.zhashut.smartcity.utils.Animation;
-import com.zhashut.smartcity.utils.ReqCallback;
+import com.zhashut.smartcity.common.ReqCallback;
 
 import org.json.JSONException;
 import org.json.JSONObject;

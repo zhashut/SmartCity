@@ -24,5 +24,15 @@ l
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 >
 app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
+r
+Bapp/src/main/java/com/zhashut/smartcity/Login/entity/LoginRes.java,7\0\70ea3920aa8c296e350005d53d0ff6961af76968
+t
+Dapp/src/main/java/com/zhashut/smartcity/Login/constant/constant.java,b\e\bef07273b907598abd2bd9c3e9391d0ab32c60d7
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+l
+<app/src/main/java/com/zhashut/smartcity/utils/Animation.java,2\0\20a064f78a2a7d30ccd5eb38af6ce6a51c7b7a32
 k
 ;app/src/main/java/com/zhashut/smartcity/utils/DateUtil.java,d\6\d6463529eaffe9ce75093e20573dbad31281e460
+q
+Aapp/src/main/java/com/zhashut/smartcity/park/entity/ParkList.java,7\0\7072d43a3d58b01f333df4ca089c9cdf1ecc7c9a
