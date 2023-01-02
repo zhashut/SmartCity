@@ -15,8 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.MessageRes;
-import com.zhashut.smartcity.common.Result;
-import com.zhashut.smartcity.utils.ReqCallback;
+import com.zhashut.smartcity.common.ResultEntity;
+import com.zhashut.smartcity.common.ReqCallback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -93,7 +93,7 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
             jsonObject.put("remark", parkRemark);
             ReqCallback reqCallback = new ReqCallback();
             // 回调方法
-            reqCallback.CallBack(CORRECT_URL, token, jsonObject.toString(), handler, Result.class);
+            reqCallback.CallBack(CORRECT_URL, token, jsonObject.toString(), handler, ResultEntity.class);
         } catch (JSONException e) {
             e.printStackTrace();
         }
