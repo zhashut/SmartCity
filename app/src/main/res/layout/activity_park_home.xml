@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".park.activity.ParkHomeActivity">
+
+    <include layout="@layout/main_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edit_text"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <!--            停车场-->
+            <include
+                android:id="@+id/in_park_list"
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--            积分-->
+            <include
+                android:id="@+id/in_park_score"
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--            充值-->
+            <include
+                android:id="@+id/in_park_recharge"
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--            我的车辆-->
+            <include
+                android:id="@+id/in_park_car"
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="9dp"
+            android:orientation="horizontal">
+
+            <!--            换购记录-->
+            <include
+                android:id="@+id/in_park_product"
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--            意见反馈-->
+            <include
+                android:id="@+id/in_park_feedback"
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--            纠错-->
+            <include
+                android:id="@+id/in_park_correct"
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!--            我的车辆-->
+            <include
+                layout="@layout/park_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    广告图-->
+    <ImageView
+        android:id="@+id/iv_rotation"
+        android:layout_width="match_parent"
+        android:layout_height="170dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="新闻资讯"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text20sp" />
+
+        <TextView
+            android:id="@+id/tv_new_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="更多"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text20sp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
