@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,15 +49,21 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
         token = preferences.getString("token", "");
         TextView tv_title = findViewById(R.id.tv_title);
         tv_title.setText("信息纠错");
+        ImageView iv_back = findViewById(R.id.iv_back);
+        iv_back.setVisibility(View.VISIBLE);
         park_name = findViewById(R.id.park_name);
         park_spot = findViewById(R.id.park_spot);
         park_content = findViewById(R.id.park_content);
         park_pho = findViewById(R.id.park_pho);
         park_remark = findViewById(R.id.park_remark);
+        iv_back.setOnClickListener(this);
         findViewById(R.id.btn_park_commit).setOnClickListener(this);
     }
 
 
+    /**
+     * 控件点击事件
+     */
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -71,6 +78,10 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
                     return;
                 }
                 parkLoading(token, parkName, parkSpot, parkContent, parkPho, parkRemark);
+                break;
+            case R.id.iv_back:
+                finish();
+                break;
         }
     }
 
