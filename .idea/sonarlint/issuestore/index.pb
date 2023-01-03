@@ -56,7 +56,3 @@ k
 ;app/src/main/java/com/zhashut/smartcity/utils/HttpUtil.java,b\9\b90286005e168898990d49965d12486caa2d843f
 l
 <app/src/main/java/com/zhashut/smartcity/utils/Animation.java,2\0\20a064f78a2a7d30ccd5eb38af6ce6a51c7b7a32
-z
-Japp/src/main/java/com/zhashut/smartcity/park/activity/CorrectActivity.java,2\0\20dae7764bcfdf8e2b09cb5f481326f29fadeac6
-w
-Gapp/src/main/java/com/zhashut/smartcity/park/activity/TestActivity.java,5\e\5eddbc72d4a27b92aed542b4389d15adb682b2de

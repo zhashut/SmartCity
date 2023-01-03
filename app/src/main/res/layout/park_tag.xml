@@ -15,7 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:text="车场查询"
         android:textColor="@color/black"
         android:textSize="@dimen/text17sp" />
 
