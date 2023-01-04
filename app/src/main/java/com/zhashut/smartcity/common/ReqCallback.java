@@ -91,7 +91,7 @@ public class ReqCallback {
     }
 
     // 带id的回调请求
-    public <T> void CallBackByID(String url, String id, Handler handler, Class<T> classOfT) {
+    public <T> void CallBackByID(String url, int id, Handler handler, Class<T> classOfT) {
         HttpUtil.JsonReqByID(url, id, new okhttp3.Callback() {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
