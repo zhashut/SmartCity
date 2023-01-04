@@ -32,8 +32,8 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
-    // 请求类型：application/json，不带任何参数
-    public static void JsonReqByID(String url, String id, okhttp3.Callback callback) {
+    // 请求类型：带id的请求
+    public static void JsonReqByID(String url, int id, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();
         okhttp3.Request request = new okhttp3.Request.Builder().url(url + "/" + id).build();
         okHttpClient.newCall(request).enqueue(callback);
