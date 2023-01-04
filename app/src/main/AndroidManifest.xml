@@ -24,7 +24,14 @@
 <!--                android:value="" />-->
 <!--        </activity>-->
         <activity
-            android:name=".park.activity.TestActivity"
+            android:name=".park.activity.ParkDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Login.activity.LoginActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

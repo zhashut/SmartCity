@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_park"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
@@ -30,8 +31,8 @@
                 android:id="@+id/tv_address"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.2"
                 android:layout_marginTop="3dp"
+                android:layout_weight="1.2"
                 android:text="大连市国际大厦F1楼"
                 android:textColor="@color/grey"
                 android:textSize="@dimen/text15sp" />
@@ -40,8 +41,8 @@
                 android:id="@+id/tv_distance"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginLeft="30dp"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:text="距离20米"
                 android:textColor="@color/grey"
