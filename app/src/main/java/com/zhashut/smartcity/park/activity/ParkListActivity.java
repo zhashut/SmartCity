@@ -42,7 +42,7 @@ public class ParkListActivity extends AppCompatActivity implements View.OnClickL
      */
     private void initView() {
         TextView tv_title = findViewById(R.id.tv_title);
-        tv_title.setText("查询停车场列表");
+        tv_title.setText("停车场列表");
         ImageView iv_back = findViewById(R.id.iv_back);
         iv_back.setVisibility(View.VISIBLE);
         iv_back.setOnClickListener(this);

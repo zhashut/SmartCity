@@ -1,13 +1,16 @@
 package com.zhashut.smartcity.park.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zhashut.smartcity.R;
+import com.zhashut.smartcity.park.activity.ParkDetailActivity;
 import com.zhashut.smartcity.park.entity.ParkListField;
 
 import java.util.List;
@@ -51,6 +54,7 @@ public class ParkListAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(R.layout.park_list_item, null);
             holder = new ViewHolder();
+            holder.ll_park = convertView.findViewById(R.id.ll_park);
             holder.parkName = convertView.findViewById(R.id.tv_parkName);
             holder.distance = convertView.findViewById(R.id.tv_distance);
             holder.address = convertView.findViewById(R.id.tv_address);
@@ -67,11 +71,16 @@ public class ParkListAdapter extends BaseAdapter {
         holder.address.setText(info.address);
         holder.vacancy.setText(info.vacancy);
         holder.rates.setText(info.rates + "/h");
-
+        holder.ll_park.setOnClickListener(view -> {
+            Intent intent = new Intent(context, ParkDetailActivity.class);
+            intent.putExtra("id", info.id);
+            context.startActivity(intent);
+        });
         return convertView;
     }
 
     class ViewHolder {
+        public LinearLayout ll_park;
         public TextView parkName;
         public TextView distance;
         public TextView address;
