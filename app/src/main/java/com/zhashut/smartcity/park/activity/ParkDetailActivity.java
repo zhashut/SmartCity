@@ -1,30 +1,24 @@
 package com.zhashut.smartcity.park.activity;
 
-import static com.zhashut.smartcity.common.RequestUrl.REQUEST_URL;
 import static com.zhashut.smartcity.park.constant.constant.PARK_DETAIL;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.os.TestLooperManager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.ReqCallback;
 import com.zhashut.smartcity.park.entity.ParkDetail;
 import com.zhashut.smartcity.park.entity.ParkDetailField;
-
-import java.net.IDN;
-import java.util.List;
 
 public class ParkDetailActivity extends AppCompatActivity {
 
@@ -36,6 +30,8 @@ public class ParkDetailActivity extends AppCompatActivity {
     private TextView tv_priceCaps;
     private TextView tv_vacancy;
     private TextView tv_allPark;
+    private RelativeLayout rl_open;
+    private ImageView iv_img;
     ReqCallback callback = new ReqCallback();
 
     private Handler handler = new Handler(Looper.myLooper()) {
@@ -48,8 +44,6 @@ public class ParkDetailActivity extends AppCompatActivity {
             }
         }
     };
-    private RelativeLayout rl_open;
-    private ImageView iv_img;
 
     /**
      * 查询停车场列表成功
