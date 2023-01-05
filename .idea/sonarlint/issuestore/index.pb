@@ -32,8 +32,6 @@ l
 <app/src/main/java/com/zhashut/smartcity/utils/Animation.java,2\0\20a064f78a2a7d30ccd5eb38af6ce6a51c7b7a32
 k
 ;app/src/main/java/com/zhashut/smartcity/utils/DateUtil.java,d\6\d6463529eaffe9ce75093e20573dbad31281e460
-k
-;app/src/main/java/com/zhashut/smartcity/utils/HttpUtil.java,b\9\b90286005e168898990d49965d12486caa2d843f
 s
 Capp/src/main/java/com/zhashut/smartcity/park/constant/constant.java,4\2\42f1e7faefc0c5feb1c6e930be6a2b4456348ba0
 q
@@ -44,10 +42,6 @@ v
 Fapp/src/main/java/com/zhashut/smartcity/park/entity/ParkListField.java,1\d\1d23c567b0c22466ece545febd5964ad7245cb78
 n
 >app/src/main/java/com/zhashut/smartcity/park/http/Request.java,b\d\bd175ce83beb4a007737d14d9af25c0ad52dc897
-n
->app/src/main/java/com/zhashut/smartcity/common/MessageRes.java,e\3\e376d1eef592e2d52cc0c180adf95ccdc428c2cd
-o
-?app/src/main/java/com/zhashut/smartcity/common/ReqCallback.java,0\0\00b2989ac488dfbad9e3b5d3beb6f60d1711ea81
 n
 >app/src/main/java/com/zhashut/smartcity/common/RequestUrl.java,e\4\e4a3aed204a4766ccfec7c6f40f6ca5b0a2ee6d0
 p
