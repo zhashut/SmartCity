@@ -13,4 +13,5 @@
     <color name="green">#25CC92</color>
     <color name="grey">#707070</color>
     <color name="commit">#1191FF</color>
+    <color name="text_blue">#4F95FF</color>
 </resources>

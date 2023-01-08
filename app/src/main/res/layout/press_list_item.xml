@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rl_press"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:padding="5dp">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="6dp">
 
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="中纪委周一打虎，刚卸任市委书记的..."
-        android:textColor="@color/black" />
+        android:text="【#中纪委周一打虎，刚卸任市委书记的副部级官员落马#】"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/text17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑于："
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2021-05-10 10:47:56"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_read"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/tv_title"
-        android:text="1235"
-        android:textColor="@color/grey" />
+        android:layout_marginTop="8dp"
+        android:text="5月10日周一上午9时，中央纪委国家监委网站发布
+一条重磅消息：江西省政协副主席肖毅涉嫌严重违
+纪违法，目前正接受中央纪委国家监委纪律审查和
+监察调查。"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
-    <ImageView
-        android:id="@+id/iv_host"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="20dp"
-        android:src="@drawable/newhost" />
+    <include layout="@layout/press_bottom" />
 
-</RelativeLayout>
+</LinearLayout>

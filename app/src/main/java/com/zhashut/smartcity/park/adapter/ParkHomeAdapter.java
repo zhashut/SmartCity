@@ -19,14 +19,14 @@ import java.util.List;
  *
  * @author: 炸薯条
  * Date: 2023/1/8
- * Time: 23:00
+ * Time: 22:01
  * Description: No Description
  */
-public class PressListAdapter extends BaseAdapter {
+public class ParkHomeAdapter extends BaseAdapter {
     private Context context;
     private List<PressDetail> pressDetails;
 
-    public PressListAdapter(Context context, List<PressDetail> pressDetails) {
+    public ParkHomeAdapter(Context context, List<PressDetail> pressDetails) {
         this.context = context;
         this.pressDetails = pressDetails;
     }
@@ -50,34 +50,29 @@ public class PressListAdapter extends BaseAdapter {
     public View getView(int i, View contentView, ViewGroup viewGroup) {
         ViewHolder holder;
         if (contentView == null) {
-            contentView = LayoutInflater.from(context).inflate(R.layout.press_list_item, null);
+            contentView = LayoutInflater.from(context).inflate(R.layout.park_home_item, null);
             holder = new ViewHolder();
-            holder.tv_title = contentView.findViewById(R.id.tv_title);
-            holder.tv_create = contentView.findViewById(R.id.tv_create);
-            holder.tv_content = contentView.findViewById(R.id.tv_content);
-            holder.tv_readNum = contentView.findViewById(R.id.tv_readNum);
-            holder.tv_commentNum = contentView.findViewById(R.id.tv_commentNum);
-            holder.tv_likeNum = contentView.findViewById(R.id.tv_likeNum);
+            holder.rl_press = contentView.findViewById(R.id.rl_press);
+            holder.title = contentView.findViewById(R.id.tv_title);
+            holder.readNum = contentView.findViewById(R.id.tv_read);
+            holder.host = contentView.findViewById(R.id.iv_host);
             contentView.setTag(holder);
         } else {
             holder = (ViewHolder) contentView.getTag();
         }
         PressDetail info = pressDetails.get(i);
-        holder.tv_title.setText("【" + info.title + "】");
-        holder.tv_create.setText(info.createTime);
-        holder.tv_content.setText(info.content.substring(0, 100) + "...");
-        holder.tv_readNum.setText(info.readNum + "");
-        holder.tv_commentNum.setText(info.commentNum + "");
-        holder.tv_likeNum.setText(info.likeNum + "");
+        String title = info.title.substring(0, 14) + "...";
+        holder.title.setText(title);
+        holder.readNum.setText(info.readNum + "");
+        holder.host.setVisibility(info.hot.equals("Y") ? View.VISIBLE : View.VISIBLE);
+
         return contentView;
     }
 
     class ViewHolder {
-        public TextView tv_title;
-        public TextView tv_create;
-        public TextView tv_content;
-        public TextView tv_readNum;
-        public TextView tv_commentNum;
-        public TextView tv_likeNum;
+        public RelativeLayout rl_press;
+        public TextView title;
+        public TextView readNum;
+        public ImageView host;
     }
 }
