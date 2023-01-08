@@ -1,0 +1,13 @@
+
+r	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Ÿ©½øÿÿÿÿ8·æÒŒÙ0
+r	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥™Úøÿÿÿÿ8¸æÒŒÙ0
+h
+java:S1301E"KReplace this "switch" statement by "if" statements to increase readability.(ºÖ8¸æÒŒÙ0
+p	java:S116"TRename this field "park_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºŒÚ…8ÉæÒŒÙ0
+p	java:S116"TRename this field "park_spot" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ÙÓÜ8ÉæÒŒÙ0
+x	java:S116 "WRename this field "park_content" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍÏÿ“ùÿÿÿÿ8ÉæÒŒÙ0
+n	java:S116!"SRename this field "park_pho" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¾•f8ÊæÒŒÙ0
+w	java:S116""VRename this field "park_remark" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ¹¡îüÿÿÿÿ8ÊæÒŒÙ0
+|
+java:S1450"ZRemove the "preferences" field and declare it as a local variable in the relevant methods.(„€Àóûÿÿÿÿ8ÔæÒŒÙ0
+>	java:S131E""Add a default case to this switch.(ºÖ8ÚæÒŒÙ0

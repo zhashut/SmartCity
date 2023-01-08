@@ -1,5 +1,7 @@
 package com.zhashut.smartcity.park.activity;
 
+import static com.zhashut.smartcity.park.constant.constant.PRESS_LIST;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,17 +11,21 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.ReqCallback;
+import com.zhashut.smartcity.park.adapter.PressListAdapter;
 import com.zhashut.smartcity.park.constant.constant;
 import com.zhashut.smartcity.park.entity.ParkList;
+import com.zhashut.smartcity.park.entity.PressList;
 
 public class ParkHomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     ReqCallback callback = new ReqCallback();
     private ParkList parkListInfo;
+    private PressList pressList;
 
     private Handler parkListHandler = new Handler(Looper.myLooper()) {
         @Override
@@ -32,6 +38,16 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
         }
     };
 
+    private Handler pressListHandler = new Handler(Looper.myLooper()) {
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+            pressList = (PressList) msg.obj;
+            initAdapter();
+        }
+    };
+
+
     /**
      * 初始化界面
      */
@@ -40,6 +56,7 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_park_home);
         initView();
+        pressLoading();
     }
 
     /**
@@ -71,6 +88,12 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.in_park_correct).setOnClickListener(this);
     }
 
+    private void initAdapter() {
+        ListView lv_press = findViewById(R.id.lv_press);
+        PressListAdapter pressListAdapter = new PressListAdapter(this, pressList.pressDetails);
+        lv_press.setAdapter(pressListAdapter);
+    }
+
     /**
      * 查询停车场列表成功
      *
@@ -80,6 +103,10 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
         Intent intent = new Intent(this, ParkListActivity.class);
         intent.putExtra("parkListInfo", parkListInfo);
         startActivity(intent);
+    }
+
+    private void pressLoading() {
+        callback.CallBack(PRESS_LIST, pressListHandler, PressList.class);
     }
 
     /**
