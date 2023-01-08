@@ -9,7 +9,6 @@
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="【#中纪委周一打虎，刚卸任市委书记的副部级官员落马#】"
         android:textColor="@color/text_blue"
         android:textSize="@dimen/text17sp" />
 
@@ -29,7 +28,6 @@
             android:id="@+id/tv_create"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2021-05-10 10:47:56"
             android:textSize="16sp" />
 
     </LinearLayout>
@@ -39,10 +37,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="5月10日周一上午9时，中央纪委国家监委网站发布
-一条重磅消息：江西省政协副主席肖毅涉嫌严重违
-纪违法，目前正接受中央纪委国家监委纪律审查和
-监察调查。"
         android:textColor="@color/black"
         android:textSize="18sp" />
 

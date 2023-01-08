@@ -144,7 +144,8 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
 
                 break;
             case R.id.in_park_feedback: // 意见反馈
-
+                Intent feedbackIntent = new Intent(this, FeedbackActivity.class);
+                startActivity(feedbackIntent);
                 break;
             case R.id.in_park_correct: // 我要纠错
                 Intent correctIntent = new Intent(this, CorrectActivity.class);

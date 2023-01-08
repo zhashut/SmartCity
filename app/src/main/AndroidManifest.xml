@@ -17,6 +17,20 @@
         android:theme="@style/Theme.SmartCity"
         tools:targetApi="29">
         <activity
+            android:name=".park.activity.FeedbackListActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".park.activity.FeedbackActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".park.activity.PressListActivity"
             android:exported="false">
             <meta-data

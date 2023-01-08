@@ -20,5 +20,9 @@ public class constant {
     // 查询停车场详情 - GET - 请求类型 - application/x-www-form-urlencoded - /prod-api/api/park/lot/{id}
     public final static String PARK_DETAIL = REQUEST_URL + "/prod-api/api/park/lot";
 
+    // 获取新闻列表
     public final static String PRESS_LIST = REQUEST_URL + "/prod-api/api/park/press/press/list?pageNum=0&pageSize=15";
+
+    // 查询意见反馈列表 - 带token
+    public final static String FEEDBACK_LIST = REQUEST_URL + "/prod-api/api/park/feedback/list";
 }
