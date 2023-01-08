@@ -89,4 +89,27 @@ public class ReqCallback {
             }
         });
     }
+
+    // 带id的回调请求
+    public <T> void CallBackByID(String url, int id, Handler handler, Class<T> classOfT) {
+        HttpUtil.JsonReqByID(url, id, new okhttp3.Callback() {
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                Message msg = Message.obtain();
+                if (response.isSuccessful()) {
+                    String userJSON = response.body().string();
+                    Gson gson = new Gson();
+                    Object info = gson.fromJson(userJSON, (Type) classOfT);
+                    msg.obj = info;
+                    handler.sendMessage(msg);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+
+            }
+        });
+    }
+
 }

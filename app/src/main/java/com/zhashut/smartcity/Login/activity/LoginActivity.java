@@ -21,6 +21,8 @@ import android.widget.Toast;
 import com.zhashut.smartcity.Login.constant.constant;
 import com.zhashut.smartcity.Login.entity.LoginRes;
 import com.zhashut.smartcity.R;
+import com.zhashut.smartcity.citysubway.activity.FeedbackActivity;
+import com.zhashut.smartcity.citysubway.activity.TestSubwayActivity;
 import com.zhashut.smartcity.park.activity.CorrectActivity;
 import com.zhashut.smartcity.park.activity.ParkListActivity;
 import com.zhashut.smartcity.park.activity.TestActivity;
@@ -91,7 +93,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * 登录成功
      */
     private void loginSuccess(LoginRes user) {
-        Intent intent = new Intent(this, TestActivity.class);
+        Intent intent = new Intent(this, TestSubwayActivity.class);
+//        Intent intent = new Intent(this, CorrectActivity.class);
         SharedPreferences.Editor edit = preferences.edit();
         String token = user.token;
         edit.putString("token", token);

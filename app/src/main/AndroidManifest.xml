@@ -17,6 +17,27 @@
         android:theme="@style/Theme.SmartCity"
         tools:targetApi="29">
         <activity
+            android:name=".citysubway.activity.ListFeedbackActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".citysubway.activity.TestSubwayActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".citysubway.activity.FeedbackActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".park.activity.TestActivity"
             android:exported="false">
             <meta-data
