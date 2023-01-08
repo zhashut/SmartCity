@@ -17,11 +17,18 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
-    // 请求类型：application/json，带token
+    // 请求类型：application/json，带token和json参数
     public static void JsonReq(String url, String token, String object, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();
         RequestBody requestBody = RequestBody.Companion.create(object, mediaType);
         Request request = new Request.Builder().url(url).header("Authorization", token).post(requestBody).build();
+        okHttpClient.newCall(request).enqueue(callback);
+    }
+
+    // 请求类型：application/json，带token和json参数
+    public static void ReqWithToken(String url, String token, okhttp3.Callback callback) {
+        OkHttpClient okHttpClient = new OkHttpClient();
+        Request request = new Request.Builder().url(url).header("Authorization", token).build();
         okHttpClient.newCall(request).enqueue(callback);
     }
 

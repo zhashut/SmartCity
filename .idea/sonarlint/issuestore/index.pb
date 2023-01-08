@@ -36,10 +36,6 @@ s
 Capp/src/main/java/com/zhashut/smartcity/park/constant/constant.java,4\2\42f1e7faefc0c5feb1c6e930be6a2b4456348ba0
 q
 Aapp/src/main/java/com/zhashut/smartcity/park/entity/ParkList.java,7\0\7072d43a3d58b01f333df4ca089c9cdf1ecc7c9a
-y
-Iapp/src/main/java/com/zhashut/smartcity/park/adapter/ParkListAdapter.java,3\f\3f8b9cd3470e5d6b3e4a6d9872d1aad5083b0d83
-v
-Fapp/src/main/java/com/zhashut/smartcity/park/entity/ParkListField.java,1\d\1d23c567b0c22466ece545febd5964ad7245cb78
 n
 >app/src/main/java/com/zhashut/smartcity/park/http/Request.java,b\d\bd175ce83beb4a007737d14d9af25c0ad52dc897
 n
