@@ -25,4 +25,7 @@ public class constant {
 
     // 查询意见反馈列表 - 带token
     public final static String FEEDBACK_LIST = REQUEST_URL + "/prod-api/api/park/feedback/list";
+
+    // 充值 - 带token - application/json
+    public final static String PARK_PAY = REQUEST_URL + "/prod-api/api/park/recharge/pay";
 }

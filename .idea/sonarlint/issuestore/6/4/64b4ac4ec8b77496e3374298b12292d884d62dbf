@@ -1,16 +1,0 @@
-
-k	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Ÿ©½øÿÿÿÿ
-p	java:S116"VRename this field "tv_parkName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ×’íÿÿÿÿÿ
-j	java:S116"URename this field "tv_address" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ôßñ
-k	java:S116"VRename this field "tv_distance" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿ‡§
-h	java:S116"SRename this field "tv_rates" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬‚ÅÈ
-l	java:S116"WRename this field "tv_priceCaps" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á†é¯
-o	java:S116"URename this field "tv_vacancy" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ş†Î‹úÿÿÿÿ
-o	java:S116 "URename this field "tv_allPark" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸŠíÿÿÿÿÿ
-g	java:S116!"RRename this field "rl_open" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿïèÄ
-f	java:S116""QRename this field "iv_img" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åôï•
-k
-java:S1450""URemove the "iv_img" field and declare it as a local variable in the relevant methods.(Åôï•
-Q	java:S125<"<This block of commented-out lines of code should be removed.(œÛ¸§
-Y
-java:S33983">Move this method into the anonymous class declared at line 37.(Ä‰Èšûÿÿÿÿ

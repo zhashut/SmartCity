@@ -135,7 +135,8 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
 
                 break;
             case R.id.in_park_recharge: // 充值
-
+                Intent payIntent = new Intent(this, ParkPayActivity.class);
+                startActivity(payIntent);
                 break;
             case R.id.in_park_car: // 我的车辆
 

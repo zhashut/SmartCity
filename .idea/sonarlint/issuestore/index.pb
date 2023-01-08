@@ -26,12 +26,6 @@ l
 app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
 r
 Bapp/src/main/java/com/zhashut/smartcity/Login/entity/LoginRes.java,7\0\70ea3920aa8c296e350005d53d0ff6961af76968
-t
-Dapp/src/main/java/com/zhashut/smartcity/Login/constant/constant.java,b\e\bef07273b907598abd2bd9c3e9391d0ab32c60d7
-l
-<app/src/main/java/com/zhashut/smartcity/utils/Animation.java,2\0\20a064f78a2a7d30ccd5eb38af6ce6a51c7b7a32
-k
-;app/src/main/java/com/zhashut/smartcity/utils/DateUtil.java,d\6\d6463529eaffe9ce75093e20573dbad31281e460
 q
 Aapp/src/main/java/com/zhashut/smartcity/park/entity/ParkList.java,7\0\7072d43a3d58b01f333df4ca089c9cdf1ecc7c9a
 v
@@ -40,13 +34,9 @@ x
 Happ/src/main/java/com/zhashut/smartcity/park/entity/ParkDetailField.java,9\4\94e64ef7c51e5785bb7dbaab3ee83763a2d1ef4a
 s
 Capp/src/main/java/com/zhashut/smartcity/park/entity/ParkDetail.java,e\6\e6fe17a51fe1e8f7a31f4aba36f2377437c73f1e
-{
-Kapp/src/main/java/com/zhashut/smartcity/park/activity/ParkListActivity.java,2\1\2114f147487d3550e5b7dda9c654cf33bf5f1003
 y
 Iapp/src/main/java/com/zhashut/smartcity/park/adapter/ParkListAdapter.java,3\f\3f8b9cd3470e5d6b3e4a6d9872d1aad5083b0d83
 r
 Bapp/src/main/java/com/zhashut/smartcity/park/entity/PressList.java,8\7\874f1a891e32ecc69053f39872d806049f56d362
-}
-Mapp/src/main/java/com/zhashut/smartcity/park/activity/ParkDetailActivity.java,6\4\64b4ac4ec8b77496e3374298b12292d884d62dbf
 t
 Dapp/src/main/java/com/zhashut/smartcity/park/entity/PressDetail.java,7\d\7d7c9553cfab55eabfdabb54a39698834a27eadf
