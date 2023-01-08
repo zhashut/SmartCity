@@ -47,8 +47,32 @@ public class ReqCallback {
     }
 
     // 带token的回调
+    // 带token的 POST请求 回调
     public <T> void CallBack(String url, String token, String json, Handler handler, Class<T> classOfT) {
         HttpUtil.JsonReq(url, token, json, new okhttp3.Callback() {
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                Message msg = Message.obtain();
+                if (response.isSuccessful()) {
+                    String userJSON = response.body().string();
+                    Gson gson = new Gson();
+                    Object info = gson.fromJson(userJSON, (Type) classOfT);
+                    msg.obj = info;
+                    handler.sendMessage(msg);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+
+            }
+        });
+    }
+
+
+    // 带token的 GET请求 回调
+    public <T> void CallBackWithToken(String url, String token, Handler handler, Class<T> classOfT) {
+        HttpUtil.ReqWithToken(url, token, new okhttp3.Callback() {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 Message msg = Message.obtain();
@@ -89,4 +113,26 @@ public class ReqCallback {
             }
         });
     }
+    // 带id的回调请求
+    public <T> void CallBackByID(String url, int id, Handler handler, Class<T> classOfT) {
+        HttpUtil.JsonReqByID(url, id, new okhttp3.Callback() {
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                Message msg = Message.obtain();
+                if (response.isSuccessful()) {
+                    String userJSON = response.body().string();
+                    Gson gson = new Gson();
+                    Object info = gson.fromJson(userJSON, (Type) classOfT);
+                    msg.obj = info;
+                    handler.sendMessage(msg);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+
+            }
+        });
+    }
+
 }

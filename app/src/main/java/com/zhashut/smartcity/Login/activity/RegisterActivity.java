@@ -15,7 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.zhashut.smartcity.Login.constant.constant;
 import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.R;
+<<<<<<< HEAD
 import com.zhashut.smartcity.common.MessageRes;
+=======
+import com.zhashut.smartcity.common.ReqResult;
+>>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
 import com.zhashut.smartcity.common.ReqCallback;
 
 import org.json.JSONObject;
@@ -36,7 +40,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private RadioGroup rg_sex;
     private int sex;
     ReqCallback callback = new ReqCallback();
+<<<<<<< HEAD
     private Handler handler = MessageRes.ResultHandler(RegisterActivity.this, "注册成功");
+=======
+    private Handler handler = ReqResult.ResultHandler(RegisterActivity.this, LoginActivity.class, "注册成功");
+>>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

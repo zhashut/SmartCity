@@ -13,8 +13,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< HEAD
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.MessageRes;
+=======
+import com.zhashut.smartcity.Login.activity.LoginActivity;
+import com.zhashut.smartcity.R;
+import com.zhashut.smartcity.common.ReqResult;
+>>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
 import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.common.ReqCallback;
 
@@ -30,7 +36,11 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
     private EditText park_content;
     private EditText park_pho;
     private EditText park_remark;
+<<<<<<< HEAD
     private Handler handler = MessageRes.ResultHandler(CorrectActivity.this);
+=======
+    private Handler handler = ReqResult.ResultHandler(CorrectActivity.this, LoginActivity.class);
+>>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
