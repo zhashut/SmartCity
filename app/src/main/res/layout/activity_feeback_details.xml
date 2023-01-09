@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_title_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:text="反馈标题："
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tv_feed_title"
+            android:text="乘坐反馈"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text20sp"
+            android:textColor="@color/red"
+            android:gravity="start|center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:text="反馈内容："
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:textSize="@dimen/text25sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:text="有时检票卡"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:textSize="@dimen/text20sp"
+            android:textColor="@color/red"
+            android:background="@drawable/shape_edit_text_garden"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+</LinearLayout>

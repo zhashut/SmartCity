@@ -28,10 +28,6 @@ public class TestSubwayActivity extends AppCompatActivity implements View.OnClic
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
             feedbackList = (FeedbackList) msg.obj;
-            System.out.println("handleMessage："+feedbackList);
-            System.out.println(feedbackList.code);//401
-            System.out.println(feedbackList.rows);
-            System.out.println("feedbackList.code.equals(\"200\") = " + feedbackList.code.equals("200"));
             if (feedbackList.code.equals("200")){
                 feedbackSuccess(feedbackList);
             }
@@ -41,7 +37,6 @@ public class TestSubwayActivity extends AppCompatActivity implements View.OnClic
     private void feedbackSuccess(FeedbackList feedbackList) {
         Intent intent = new Intent(this, ListFeedbackActivity.class);
         intent.putExtra("listFields",feedbackList);
-        System.out.println("feedbackSuccess"+feedbackList);
         startActivity(intent);
     }
 
@@ -67,7 +62,7 @@ public class TestSubwayActivity extends AppCompatActivity implements View.OnClic
                 String token = preferences.getString("token", "");
                 System.out.println(token);
                 ReqCallback reqCallback = new ReqCallback();
-                reqCallback.CallBack(Constant.FEEDBACK_ALL_URL,token,"",handler,FeedbackList.class);
+                reqCallback.CallBackWithToken(Constant.FEEDBACK_ALL_URL,token,handler,FeedbackList.class);
                 break;
         }
     }

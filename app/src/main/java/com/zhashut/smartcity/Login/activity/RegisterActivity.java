@@ -17,6 +17,7 @@ import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.MessageRes;
 import com.zhashut.smartcity.common.ReqResult;
+import com.zhashut.smartcity.common.ReqResult;
 import com.zhashut.smartcity.common.ReqCallback;
 
 import org.json.JSONObject;
@@ -39,6 +40,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     ReqCallback callback = new ReqCallback();
 //    private Handler handler = MessageRes.ResultHandler(RegisterActivity.this, "注册成功");
     private Handler handler = ReqResult.ResultHandler(RegisterActivity.this, LoginActivity.class, "注册成功");
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,6 +18,9 @@ import com.zhashut.smartcity.common.MessageRes;
 import com.zhashut.smartcity.Login.activity.LoginActivity;
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.ReqResult;
+import com.zhashut.smartcity.Login.activity.LoginActivity;
+import com.zhashut.smartcity.R;
+import com.zhashut.smartcity.common.ReqResult;
 import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.common.ReqCallback;
 
@@ -33,8 +36,9 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
     private EditText park_content;
     private EditText park_pho;
     private EditText park_remark;
-    private Handler handler = MessageRes.ResultHandler(CorrectActivity.this);
+//    private Handler handler = MessageRes.ResultHandler(CorrectActivity.this);
 //    private Handler handler = ReqResult.ResultHandler(CorrectActivity.this, LoginActivity.class);
+    private Handler handler = ReqResult.ResultHandler(CorrectActivity.this, LoginActivity.class);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

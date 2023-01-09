@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,12 +18,14 @@ import com.zhashut.smartcity.citysubway.entity.FeedbackListField;
 import java.io.Serializable;
 import java.util.List;
 
-public class ListFeedbackActivity extends AppCompatActivity {
+public class ListFeedbackActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, View.OnClickListener {
 
 
     private List<FeedbackListField> listFields;
 
     private ListView lv_feedback;
+
+    private Integer total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +41,8 @@ public class ListFeedbackActivity extends AppCompatActivity {
      */
     private void initView() {
         TextView tv_title = findViewById(R.id.tv_title);
-        tv_title.setText("意见反馈列表");
+        tv_title.setText("意见反馈列表<"+total+">");
+        findViewById(R.id.iv_back).setOnClickListener(this);
         initAdapter();
     }
 
@@ -47,6 +52,7 @@ public class ListFeedbackActivity extends AppCompatActivity {
     private void initAdapter() {
         lv_feedback = findViewById(R.id.lv_feedback);
         ListFeedbackAdapter adapter = new ListFeedbackAdapter(this,listFields);
+        lv_feedback.setOnItemClickListener(this);
         lv_feedback.setAdapter(adapter);
     }
 
@@ -56,11 +62,25 @@ public class ListFeedbackActivity extends AppCompatActivity {
     private void onResult() {
         Intent intent = getIntent();
         FeedbackList feedbackInfo = (FeedbackList) intent.getSerializableExtra("listFields");
-        System.out.println(feedbackInfo);
         listFields = feedbackInfo.rows;
+        total = feedbackInfo.total;
     }
 
 
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        Integer id = listFields.get(position).id;
+        Intent intent = new Intent(this, FeedbackDetailsActivity.class);
+        intent.putExtra("id",id);
+        startActivity(intent);
+    }
 
-
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.iv_back:
+                finish();
+                break;
+        }
+    }
 }

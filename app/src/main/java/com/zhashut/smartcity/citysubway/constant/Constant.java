@@ -15,5 +15,7 @@ public class Constant {
     public final static String FEEDBACK_ADD_URL = REQUEST_URL + "/prod-api/api/metro/feedback";
 
     // 获取意见反馈列表  请求类型：application/json
-    public final static String FEEDBACK_ALL_URL = REQUEST_URL + "/prod-api/api/metro/feedback/list?pageNum=0&pageSize=10";
+    public final static String FEEDBACK_ALL_URL = REQUEST_URL + "/prod-api/api/metro/feedback/list";
+
+    public final static String FEEDBACK_DETAIL = REQUEST_URL + "/prod-api/api/metro/feedback/";
 }

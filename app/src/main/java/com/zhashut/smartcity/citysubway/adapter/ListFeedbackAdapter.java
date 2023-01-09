@@ -1,6 +1,7 @@
 package com.zhashut.smartcity.citysubway.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.zhashut.smartcity.R;
+import com.zhashut.smartcity.citysubway.activity.FeedbackDetailsActivity;
 import com.zhashut.smartcity.citysubway.entity.FeedbackListField;
 
 import java.util.List;
@@ -17,6 +19,7 @@ public class ListFeedbackAdapter extends BaseAdapter {
     private Context context;
 
     private List<FeedbackListField> listFields;
+    private FeedbackListField feedback;
 
     public ListFeedbackAdapter(Context context, List<FeedbackListField> listFields) {
         this.context = context;
@@ -51,12 +54,14 @@ public class ListFeedbackAdapter extends BaseAdapter {
         }else {
             holder = (ViewHolder) view.getTag();
         }
-        FeedbackListField feedback = listFields.get(position);
+        feedback = listFields.get(position);
         holder.tv_title.setText(feedback.title);
-        holder.tv_content.setText(feedback.content);
+        holder.tv_content.setText(feedback.content == null? "无": feedback.content);
         holder.tv_time.setText(feedback.createTime);
         return view;
     }
+
+
 
     class ViewHolder {
         private TextView tv_title;

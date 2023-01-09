@@ -18,6 +18,9 @@ public class FeedbackList implements Serializable {
     @SerializedName("rows")
     public List<FeedbackListField> rows;
 
+    @SerializedName("data")
+    public Feedback data;
+
     @SerializedName("total")
     public Integer total;//总记录数
 

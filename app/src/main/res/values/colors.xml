@@ -14,4 +14,5 @@
     <color name="grey">#707070</color>
     <color name="light_grey">#979595</color>
     <color name="commit">#1191FF</color>
+    <color name="red">#F40D0D</color>
 </resources>

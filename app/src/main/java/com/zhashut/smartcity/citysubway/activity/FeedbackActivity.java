@@ -49,6 +49,7 @@ public class FeedbackActivity extends AppCompatActivity implements View.OnClickL
         et_title =  findViewById(R.id.et_title);
         et_content =  findViewById(R.id.et_content);
         findViewById(R.id.btn_commit).setOnClickListener(this);
+        findViewById(R.id.iv_back).setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +63,9 @@ public class FeedbackActivity extends AppCompatActivity implements View.OnClickL
                     return;
                 }
                 feedbackLoading(token,title,content);
+                break;
+            case R.id.iv_back:
+                finish();
                 break;
         }
     }

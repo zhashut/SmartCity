@@ -26,6 +26,7 @@ import com.zhashut.smartcity.citysubway.activity.TestSubwayActivity;
 import com.zhashut.smartcity.park.activity.CorrectActivity;
 import com.zhashut.smartcity.park.activity.ParkListActivity;
 import com.zhashut.smartcity.park.activity.TestActivity;
+
 import com.zhashut.smartcity.utils.Animation;
 import com.zhashut.smartcity.common.ReqCallback;
 
@@ -95,6 +96,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void loginSuccess(LoginRes user) {
         Intent intent = new Intent(this, TestSubwayActivity.class);
 //        Intent intent = new Intent(this, CorrectActivity.class);
+
+//        Intent intent = new Intent(this, TestActivity.class);
+//        Intent intent = new Intent(this, CorrectActivity.class);
+
         SharedPreferences.Editor edit = preferences.edit();
         String token = user.token;
         edit.putString("token", token);
