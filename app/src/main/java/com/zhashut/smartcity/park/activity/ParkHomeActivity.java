@@ -1,9 +1,7 @@
 package com.zhashut.smartcity.park.activity;
 
+import static com.zhashut.smartcity.park.constant.constant.PARK_PRODUCT;
 import static com.zhashut.smartcity.park.constant.constant.PRESS_LIST;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,11 +12,15 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.ReqCallback;
 import com.zhashut.smartcity.park.adapter.ParkHomeAdapter;
 import com.zhashut.smartcity.park.constant.constant;
 import com.zhashut.smartcity.park.entity.ParkList;
+import com.zhashut.smartcity.park.entity.ParkProduct;
 import com.zhashut.smartcity.park.entity.PressList;
 
 public class ParkHomeActivity extends AppCompatActivity implements View.OnClickListener {
@@ -52,6 +54,29 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
             initAdapter();
         }
     };
+
+    /**
+     * 换购列表接口回调
+     */
+    private Handler parkProductHandler = new Handler(Looper.myLooper()) {
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+            ParkProduct parkProduct = (ParkProduct) msg.obj;
+            if (parkProduct.code.equals("200")) {
+                parkProductListSuccess(parkProduct);
+            }
+        }
+    };
+
+    /**
+     * 查询换购记录
+     */
+    private void parkProductListSuccess(ParkProduct parkProduct) {
+        Intent parkProductIntent = new Intent(this, ParkProductActivity.class);
+        parkProductIntent.putExtra("parkProduct", parkProduct);
+        startActivity(parkProductIntent);
+    }
 
 
     /**
@@ -142,7 +167,7 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
 
                 break;
             case R.id.in_park_product: // 换购记录
-
+                callback.CallBack(PARK_PRODUCT, parkProductHandler, ParkProduct.class);
                 break;
             case R.id.in_park_feedback: // 意见反馈
                 Intent feedbackIntent = new Intent(this, FeedbackActivity.class);
@@ -158,4 +183,5 @@ public class ParkHomeActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(pressIntent);
         }
     }
+
 }

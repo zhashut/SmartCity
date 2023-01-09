@@ -1,0 +1,10 @@
+
+o
+java:S1104F"YMake tv_createTime a static final constant or non-public and provide accessors if needed.( ±í´
+i
+java:S1104G"TMake tv_title a static final constant or non-public and provide accessors if needed.(Š÷®u
+q
+java:S1104H"VMake tv_content a static final constant or non-public and provide accessors if needed.(ê²ýßÿÿÿÿÿ
+m	java:S116F"XRename this field "tv_createTime" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ±í´
+g	java:S116G"SRename this field "tv_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š÷®u
+o	java:S116H"URename this field "tv_content" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê²ýßÿÿÿÿÿ

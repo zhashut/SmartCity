@@ -28,4 +28,7 @@ public class constant {
 
     // 充值 - 带token - application/json
     public final static String PARK_PAY = REQUEST_URL + "/prod-api/api/park/recharge/pay";
+
+    // 查询换购商品列表 - application/json
+    public final static String PARK_PRODUCT = REQUEST_URL + "/prod-api/api/park/product/list";
 }

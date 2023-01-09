@@ -1,0 +1,12 @@
+
+j
+java:S1104I"TMake rl_press a static final constant or non-public and provide accessors if needed.(Ï¸§
+g
+java:S1104J"QMake title a static final constant or non-public and provide accessors if needed.(á¢Ù™
+n
+java:S1104K"SMake readNum a static final constant or non-public and provide accessors if needed.(š«¹­úÿÿÿÿ
+k
+java:S1104L"PMake host a static final constant or non-public and provide accessors if needed.(×İ³Ôşÿÿÿÿ
+z
+java:S3923C"]This conditional operation returns the same value whether the condition is "true" or "false".(¦û¿¹8¥¨ÓÙ0
+h	java:S116I"SRename this field "rl_press" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï¸§
