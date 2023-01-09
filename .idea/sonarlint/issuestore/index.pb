@@ -51,8 +51,6 @@ Eapp/src/main/java/com/zhashut/smartcity/park/entity/FeedbackList.java,7\f\7fa3
 }
 Mapp/src/main/java/com/zhashut/smartcity/park/adapter/FeedbackListAdapter.java,9\3\933059566116956bd9d1a78a70be3f0d4fa651d4
 k
-;app/src/main/java/com/zhashut/smartcity/utils/HttpUtil.java,b\9\b90286005e168898990d49965d12486caa2d843f
-k
 ;app/src/main/java/com/zhashut/smartcity/utils/DateUtil.java,d\6\d6463529eaffe9ce75093e20573dbad31281e460
 l
 <app/src/main/java/com/zhashut/smartcity/utils/Animation.java,2\0\20a064f78a2a7d30ccd5eb38af6ce6a51c7b7a32
