@@ -17,11 +17,8 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
-<<<<<<< HEAD
     // 请求类型：application/json，带token
-=======
     // 请求类型：application/json，带token和json参数
->>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
     public static void JsonReq(String url, String token, String object, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();
         RequestBody requestBody = RequestBody.Companion.create(object, mediaType);
@@ -29,8 +26,6 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
-<<<<<<< HEAD
-=======
     // 请求类型：application/json，带token和json参数
     public static void ReqWithToken(String url, String token, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -38,7 +33,6 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
->>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
     // 请求类型：application/json，不带任何参数
     public static void JsonReq(String url, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -46,8 +40,6 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
-<<<<<<< HEAD
-=======
     // 请求类型：带id的请求
     public static void JsonReqByID(String url, int id, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -55,5 +47,11 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
->>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
+    // 请求类型：application/json，带token和json参数 请求类型：带id的请求
+    public static void ReqWithTokenById(String url, String token,Integer id, okhttp3.Callback callback) {
+        OkHttpClient okHttpClient = new OkHttpClient();
+        Request request = new Request.Builder().url(url + "/" + id).header("Authorization", token).build();
+        okHttpClient.newCall(request).enqueue(callback);
+    }
+
 }
