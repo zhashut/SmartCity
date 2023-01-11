@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import com.google.gson.Gson;
 import com.zhashut.smartcity.utils.HttpUtil;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.lang.reflect.Type;
 
@@ -114,7 +116,7 @@ public class ReqCallback {
 
     // 带id的回调请求 且带token
     public <T> void CallBackByIDWithToken(String url, int id, String token, Handler handler, Class<T> classOfT) {
-        HttpUtil.ReqWithTokenById(url,token, id, new okhttp3.Callback() {
+        HttpUtil.ReqWithTokenById(url, token, id, new okhttp3.Callback() {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 Message msg = Message.obtain();
@@ -156,4 +158,25 @@ public class ReqCallback {
         });
     }
 
+    // 带token和id的 POST请求 回调
+    public <T> void CallBackPostByIDWithToken(String url, String token, int id, JSONObject json, Handler handler, Class<T> classOfT) {
+        HttpUtil.ReqPostWithTokenById(url, token, id, json, new okhttp3.Callback() {
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                Message msg = Message.obtain();
+                if (response.isSuccessful()) {
+                    String userJSON = response.body().string();
+                    Gson gson = new Gson();
+                    Object info = gson.fromJson(userJSON, (Type) classOfT);
+                    msg.obj = info;
+                    handler.sendMessage(msg);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+
+            }
+        });
+    }
 }
