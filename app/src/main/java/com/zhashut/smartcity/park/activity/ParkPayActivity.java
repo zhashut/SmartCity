@@ -7,10 +7,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.common.ReqCallback;
@@ -71,6 +73,10 @@ public class ParkPayActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_pay:
+                if (TextUtils.isEmpty(money)) {
+                    Toast.makeText(this, "金额不能为空", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 JSONObject jsonObject = new JSONObject();
                 try {
                     jsonObject.put("money", money);

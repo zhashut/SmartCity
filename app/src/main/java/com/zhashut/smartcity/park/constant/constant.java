@@ -31,4 +31,7 @@ public class constant {
 
     // 查询换购商品列表 - application/json
     public final static String PARK_PRODUCT = REQUEST_URL + "/prod-api/api/park/product/list";
+
+    // 兑换商品 - 带token - post
+    public final static String PARK_CONSUME = REQUEST_URL + "/prod-api/api/park/score/consume";
 }

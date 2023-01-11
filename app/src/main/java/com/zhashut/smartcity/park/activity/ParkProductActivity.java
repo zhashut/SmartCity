@@ -3,6 +3,7 @@ package com.zhashut.smartcity.park.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -17,6 +18,8 @@ import java.util.List;
 public class ParkProductActivity extends AppCompatActivity {
 
     private List<ParkProductList> productLists;
+    private SharedPreferences preferences;
+    private String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +33,12 @@ public class ParkProductActivity extends AppCompatActivity {
      * 初始化界面控件
      */
     private void initView() {
+        preferences = getSharedPreferences("config", MODE_PRIVATE);
+        token = preferences.getString("token", "");
         TextView tv_title = findViewById(R.id.tv_title);
-        tv_title.setText("换购记录");
+        tv_title.setText("商品换购");
         ListView lv_product = findViewById(R.id.lv_product);
-        ParkProductAdapter parkProductAdapter = new ParkProductAdapter(this, productLists);
+        ParkProductAdapter parkProductAdapter = new ParkProductAdapter(this, productLists, token);
         lv_product.setAdapter(parkProductAdapter);
     }
 

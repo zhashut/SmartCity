@@ -1,14 +1,14 @@
 
-p
-java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(ÍéÌ‘øÿÿÿÿ8Êİº‹Ù0
-q
-java:S1104"TMake parkName a static final constant or non-public and provide accessors if needed.(Êâÿÿ8Êİº‹Ù0
-q
-java:S1104"TMake distance a static final constant or non-public and provide accessors if needed.(‡ñÚ8Êİº‹Ù0
-p
-java:S1104	"SMake address a static final constant or non-public and provide accessors if needed.(ÁƒÎÚ8Êİº‹Ù0
-o
+i
+java:S1104"NMake id a static final constant or non-public and provide accessors if needed.(ÍéÌ‘øÿÿÿÿ
+j
+java:S1104"TMake parkName a static final constant or non-public and provide accessors if needed.(Êâÿÿ
+j
+java:S1104"TMake distance a static final constant or non-public and provide accessors if needed.(‡ñÚ
+i
+java:S1104	"SMake address a static final constant or non-public and provide accessors if needed.(ÁƒÎÚ
+h
 java:S1104
-"SMake vacancy a static final constant or non-public and provide accessors if needed.(Ìë8Êİº‹Ù0
-s
-java:S1104"QMake rates a static final constant or non-public and provide accessors if needed.(Íƒ¼ıÿÿÿÿ8Êİº‹Ù0
+"SMake vacancy a static final constant or non-public and provide accessors if needed.(Ìë
+l
+java:S1104"QMake rates a static final constant or non-public and provide accessors if needed.(Íƒ¼ıÿÿÿÿ

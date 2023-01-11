@@ -76,29 +76,16 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="换购时间："
-            android:textColor="@color/black"
-            android:textSize="@dimen/text20sp" />
-
-
-        <TextView
-            android:id="@+id/tv_createTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2021-04-12 09:34:16"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text20sp" />
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/shape_login_btn"
+        android:text="兑换"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text17sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"
