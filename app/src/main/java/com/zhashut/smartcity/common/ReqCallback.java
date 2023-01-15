@@ -46,7 +46,6 @@ public class ReqCallback {
         });
     }
 
-    // 带token的回调
     // 带token的 POST请求 回调
     public <T> void CallBack(String url, String token, String json, Handler handler, Class<T> classOfT) {
         HttpUtil.JsonReq(url, token, json, new okhttp3.Callback() {
@@ -68,7 +67,6 @@ public class ReqCallback {
             }
         });
     }
-
 
     // 带token的 GET请求 回调
     public <T> void CallBackWithToken(String url, String token, Handler handler, Class<T> classOfT) {
@@ -115,8 +113,9 @@ public class ReqCallback {
     }
 
     // 带id的回调请求 且带token get方法
+    // 带id的回调请求 且带token
     public <T> void CallBackByIDWithToken(String url, int id, String token, Handler handler, Class<T> classOfT) {
-        HttpUtil.ReqWithTokenById(url, token, id, new okhttp3.Callback() {
+        HttpUtil.ReqWithTokenById(url,token, id, new okhttp3.Callback() {
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 Message msg = Message.obtain();
@@ -135,6 +134,7 @@ public class ReqCallback {
             }
         });
     }
+
     // 带id的回调请求
     public <T> void CallBackByID(String url, int id, Handler handler, Class<T> classOfT) {
         HttpUtil.JsonReqByID(url, id, new okhttp3.Callback() {
@@ -158,3 +158,4 @@ public class ReqCallback {
     }
 
 }
+

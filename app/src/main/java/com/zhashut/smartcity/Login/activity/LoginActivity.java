@@ -23,10 +23,6 @@ import com.zhashut.smartcity.Login.entity.LoginRes;
 import com.zhashut.smartcity.R;
 import com.zhashut.smartcity.park.activity.CorrectActivity;
 import com.zhashut.smartcity.park.activity.ParkListActivity;
-<<<<<<< HEAD
-import com.zhashut.smartcity.park.activity.TestActivity;
-=======
->>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
 import com.zhashut.smartcity.utils.Animation;
 import com.zhashut.smartcity.common.ReqCallback;
 
@@ -94,11 +90,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
      * 登录成功
      */
     private void loginSuccess(LoginRes user) {
-<<<<<<< HEAD
-        Intent intent = new Intent(this, TestActivity.class);
-=======
         Intent intent = new Intent(this, CorrectActivity.class);
->>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
         SharedPreferences.Editor edit = preferences.edit();
         String token = user.token;
         edit.putString("token", token);

@@ -8,17 +8,20 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.zhashut.smartcity.R;
 =======
+=======
+>>>>>>> 41ed837f916d4692053d7554b4de25ec1098388a
 import com.zhashut.smartcity.Login.activity.LoginActivity;
 import com.zhashut.smartcity.common.ReqResult;
->>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
 import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.common.ReqCallback;
 
@@ -34,11 +37,7 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
     private EditText park_content;
     private EditText park_pho;
     private EditText park_remark;
-<<<<<<< HEAD
-    private Handler handler = MessageRes.ResultHandler(CorrectActivity.this);
-=======
     private Handler handler = ReqResult.ResultHandler(CorrectActivity.this, LoginActivity.class);
->>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,15 +54,21 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
         token = preferences.getString("token", "");
         TextView tv_title = findViewById(R.id.tv_title);
         tv_title.setText("信息纠错");
+        ImageView iv_back = findViewById(R.id.iv_back);
+        iv_back.setVisibility(View.VISIBLE);
         park_name = findViewById(R.id.park_name);
         park_spot = findViewById(R.id.park_spot);
         park_content = findViewById(R.id.park_content);
         park_pho = findViewById(R.id.park_pho);
         park_remark = findViewById(R.id.park_remark);
+        iv_back.setOnClickListener(this);
         findViewById(R.id.btn_park_commit).setOnClickListener(this);
     }
 
 
+    /**
+     * 控件点击事件
+     */
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -78,6 +83,10 @@ public class CorrectActivity extends AppCompatActivity implements View.OnClickLi
                     return;
                 }
                 parkLoading(token, parkName, parkSpot, parkContent, parkPho, parkRemark);
+                break;
+            case R.id.iv_back:
+                finish();
+                break;
         }
     }
 

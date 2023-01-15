@@ -17,7 +17,7 @@
         android:theme="@style/Theme.SmartCity"
         tools:targetApi="29">
         <activity
-            android:name=".park.activity.TestActivity"
+            android:name=".park.activity.ParkDetailActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
