@@ -15,6 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.zhashut.smartcity.Login.constant.constant;
 import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.R;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 41ed837f916d4692053d7554b4de25ec1098388a
 import com.zhashut.smartcity.common.ReqResult;
 import com.zhashut.smartcity.common.ReqCallback;
 

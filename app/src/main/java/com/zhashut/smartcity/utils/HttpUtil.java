@@ -18,7 +18,7 @@ public class HttpUtil {
         Request request = new Request.Builder().url(url).post(requestBody).build();
         okHttpClient.newCall(request).enqueue(callback);
     }
-
+    // 请求类型：application/json，带token
     // 请求类型：application/json，带token和json参数
     public static void JsonReq(String url, String token, String object, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();
@@ -48,6 +48,7 @@ public class HttpUtil {
         okHttpClient.newCall(request).enqueue(callback);
     }
 
+    // 请求类型：application/json，带token和json参数 请求类型：带id的请求
     // 请求类型：application/json，带token和json参数
     public static void ReqWithTokenById(String url, String token, Integer id, okhttp3.Callback callback) {
         OkHttpClient okHttpClient = new OkHttpClient();

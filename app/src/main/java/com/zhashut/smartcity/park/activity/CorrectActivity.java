@@ -14,8 +14,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.zhashut.smartcity.Login.activity.LoginActivity;
+<<<<<<< HEAD
+<<<<<<< HEAD
 import com.zhashut.smartcity.R;
+=======
+=======
+>>>>>>> 41ed837f916d4692053d7554b4de25ec1098388a
+import com.zhashut.smartcity.Login.activity.LoginActivity;
 import com.zhashut.smartcity.common.ReqResult;
 import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.common.ReqCallback;
