@@ -1,0 +1,10 @@
+
+k	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£Ÿ©½øÿÿÿÿ
+k	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏöÓãıÿÿÿÿ
+e	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÜŒ
+f	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª§í‹
+a
+java:S1301J"KReplace this "switch" statement by "if" statements to increase readability.(ºÖ
+u
+java:S1450"ZRemove the "preferences" field and declare it as a local variable in the relevant methods.(„€Àóûÿÿÿÿ
+7	java:S131J""Add a default case to this switch.(ºÖ

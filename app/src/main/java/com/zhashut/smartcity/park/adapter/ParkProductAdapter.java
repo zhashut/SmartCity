@@ -19,6 +19,8 @@ import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.park.activity.ParkHomeActivity;
 import com.zhashut.smartcity.park.entity.ParkProductList;
 
+import org.json.JSONObject;
+
 import java.util.List;
 
 /**
@@ -34,12 +36,13 @@ public class ParkProductAdapter extends BaseAdapter {
     private List<ParkProductList> productLists;
     private String token;
     ReqCallback callback = new ReqCallback();
-    private Handler handler = ReqResult.ResultHandler(context, ParkHomeActivity.class);
+    private Handler handler;
 
-    public ParkProductAdapter(Context context, List<ParkProductList> productLists, String token) {
+    public ParkProductAdapter(Context context, List<ParkProductList> productLists, String token, Handler handler) {
         this.context = context;
         this.productLists = productLists;
         this.token = token;
+        this.handler = handler;
     }
 
     @Override
@@ -67,7 +70,7 @@ public class ParkProductAdapter extends BaseAdapter {
             viewhandler.tv_price = contentView.findViewById(R.id.tv_price);
             viewhandler.tv_score = contentView.findViewById(R.id.tv_score);
             viewhandler.btn_exchange = contentView.findViewById(R.id.btn_exchange);
-            contentView.setTag(handler);
+            contentView.setTag(viewhandler);
         } else {
             viewhandler = (ViewHandler) contentView.getTag();
         }
@@ -77,7 +80,7 @@ public class ParkProductAdapter extends BaseAdapter {
         viewhandler.tv_price.setText(info.price + "");
         viewhandler.tv_score.setText(info.score + "");
         viewhandler.btn_exchange.setOnClickListener(v -> {
-            callback.CallBackByIDWithToken(PARK_CONSUME, info.id, token, handler, ResultEntity.class);
+            callback.CallBackPostByIDWithToken(PARK_CONSUME, token, info.id, new JSONObject(), handler, ResultEntity.class);
         });
         return contentView;
     }

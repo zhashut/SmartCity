@@ -1,0 +1,15 @@
+
+^
+java:S1192c"IDefine a constant instead of duplicating this literal "password" 3 times.(ÓåË
+_
+java:S1192b"IDefine a constant instead of duplicating this literal "username" 3 times.(Ú‰ˆ©
+a
+java:S1301w"KReplace this "switch" statement by "if" statements to increase readability.(ºÖ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ş·˜
+7	java:S131w""Add a default case to this switch.(ºÖ
+S
+java:S1117”"<Rename "username" which hides the field declared at line 42.(²¿ø
+S
+java:S1117•"<Rename "password" which hides the field declared at line 43.(ÍÍó
+T
+java:S3398l">Move this method into the anonymous class declared at line 47.(—ŒÀ¤
