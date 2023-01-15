@@ -16,7 +16,6 @@ import com.zhashut.smartcity.Login.constant.constant;
 import com.zhashut.smartcity.common.ResultEntity;
 import com.zhashut.smartcity.R;
 <<<<<<< HEAD
-import com.zhashut.smartcity.common.MessageRes;
 =======
 import com.zhashut.smartcity.common.ReqResult;
 >>>>>>> aa82e7c072fb887c8874cee5dc197c64c4bda911
