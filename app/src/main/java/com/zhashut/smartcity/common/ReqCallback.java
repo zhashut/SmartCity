@@ -114,6 +114,7 @@ public class ReqCallback {
         });
     }
 
+    // 带id的回调请求 且带token get方法
     // 带id的回调请求 且带token
     public <T> void CallBackByIDWithToken(String url, int id, String token, Handler handler, Class<T> classOfT) {
         HttpUtil.ReqWithTokenById(url, token, id, new okhttp3.Callback() {
@@ -180,3 +181,4 @@ public class ReqCallback {
         });
     }
 }
+
